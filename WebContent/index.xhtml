@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+<h:head>
+	<title>Temel JSF Etiketleri</title>
+	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+    crossorigin="anonymous" />
+	
+</h:head> 
+
+<h:body> 
+<h:form>
+
+	<div class="container">
+	
+		<div class="row">
+			<div class="col-md-12 " style="text-align:center;color:#2ebdbd">
+				<h1>JSF TEMEL ETİKELERİN KULLANIMI</h1>
+			</div>
+		</div>
+		
+		<div class="row mt-2" style="background-color: #537c8e; color:white;">
+	
+			<div class="col col-md-6">
+				<h2>h:inputText Kullanımı</h2>
+				<div class="form-group">
+					<h:outputLabel value="Kullanıcı Bilgi Giriş Aracı"/>
+					<h:inputText value="" class="form-control"/>
+					<h:outputLabel value="Kullanıcı Bilgi Giriş Pasif"/>
+					<h:inputText value="" disabled="true" class="form-control"/>
+					<h:outputLabel value="Kullanıcı Bilgi Giriş Kısıtlı Uzunluk 5 Harf"/>
+					<h:inputText value="" maxlength="5" class="form-control"/>
+				</div>
+				<h:button value="İşlem Yap" class="btn btn-success col-md-12"/>
+			</div>
+		
+			<div class="col col-md-6">
+				<h2>h:inputSecret Kullanımı</h2>
+				<div class="form-group">
+					<h:outputLabel value="Kullanıcı Gizli Bilgi Giriş Aracı"/>
+					<h:inputSecret value="" class="form-control"/>
+					
+				</div>
+				<h2>h:inputTextarea Kullanımı</h2>
+				<div class="form-group">
+					<h:outputLabel value="Kullanıcı Geniş Text Bilgi Giriş Aracı"/>
+					<h:inputTextarea value=""  class="form-control"/>
+					
+				</div>
+			</div>
+		
+			<div class="col col-md-6">
+				<h2>h:selectBooleanCheckbox Kullanımı</h2>
+				<div class="form-group">
+					<h:outputLabel value="Onay Kutusu Aracı"/>
+					<h:selectBooleanCheckbox value="Beni Hatırla" class="form-control" />
+					
+				</div>
+			</div>
+			
+			<div class="col col-md-6">
+					<h2>h:selectBooleanCheckbox Kullanımı</h2>
+					<div class="form-group">
+						<h:outputLabel value="Onay Kutusu Liste Aracı"/>
+						<h:selectManyCheckbox border="5"  value="" class="form-control">
+							<f:selectItem itemValue="1" itemLabel="Kitap Okumak" class="form-control"/>
+							<f:selectItem itemValue="2" itemLabel="Spor Yapmak" class="form-control"/>
+							<f:selectItem itemValue="3" itemLabel="Sinamaya Girmek" class="form-control"/>
+							<f:selectItem itemValue="4" itemLabel="Seyahat Etmek" class="form-control"/>
+						</h:selectManyCheckbox>
+						
+					</div>
+			</div>
+			
+			<div class="col col-md-6">
+				 <h3>Yaş Grubunuzu Seçiniz</h3> 
+		         <h:selectOneRadio value = "" class="col-md-12 form-control">
+		            <f:selectItem itemValue = "1" itemLabel = "0 - 17 Yaş" />
+		            <f:selectItem itemValue = "2" itemLabel = "18 - 35 Yaş" />
+		            <f:selectItem itemValue = "3" itemLabel = "36 - 65 Yaş" />
+		            
+		         </h:selectOneRadio>	
+			</div>
+			
+			<div class="col col-md-6">
+				 <h3>İl inizi Seçiniz</h3>  
+		         <h:selectOneListbox value = "" class="col-md-12 form-control"> 
+		            <f:selectItem itemValue = "01" itemLabel = "Adana" /> 
+		            <f:selectItem itemValue = "06" itemLabel = "Ankara" /> 
+		            <f:selectItem itemValue = "34" itemLabel = "İstanbul" /> 
+		            <f:selectItem itemValue = "55" itemLabel = "Samsun" /> 
+		                 
+		         </h:selectOneListbox>  
+			</div>
+			
+			<div class="col col-md-6">
+				 <h3>Meslek Grubunuzu Seçiniz.</h3>  
+		         <h:selectOneMenu value = "" class="col-md-12 form-control"> 
+		            <f:selectItem itemValue = "1" itemLabel = "İşçi Sözleşmeli" /> 
+		            <f:selectItem itemValue = "2" itemLabel = "Bilgisaya Mühendisi" /> 
+		            <f:selectItem itemValue = "3" itemLabel = "Muhasebeci" /> 
+		            <f:selectItem itemValue = "4" itemLabel = "Genel Müdür" /> 
+		            <f:selectItem itemValue = "5" itemLabel = "CEO" />     
+		         </h:selectOneMenu>  
+			</div>
+				
+			<div class="col col-md-6">
+			 	<h3>h:graphicImage Kullanımı </h3>
+				<h:graphicImage style="" class="img-thumbnail"
+   					value = "/images/jsf_logo.png"/> 
+			</div>
+			
+		
+		</div>
+	</div>
+
+
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+   crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+   integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+   crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+   integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+   crossorigin="anonymous"></script>
+ </h:form>
+</h:body> 
+</html>
